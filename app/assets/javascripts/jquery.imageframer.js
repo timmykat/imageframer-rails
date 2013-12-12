@@ -68,15 +68,12 @@
       if (settings.title.text) {
         $frame.append('<div class="image-title" style="display: inline-block">' + settings.title.text + '</div>');
         $title = $frame.children('.image-title');
-        console.log ($frame.width());
-        console.log ($title.width());
         titleCss = {'left': ($frame.width() - $title.width())/2 + 'px', 'padding': '3px 5px', 'position': 'absolute'}
         if (settings.title.position == 'above') {
           titleCss = $.extend({}, titleCss, { 'top': imagePosition.top/4 + 'px' });
         } else {  
           titleCss = $.extend({}, titleCss, { 'bottom': imagePosition.top/4 + 'px' });
         }
-        console.log(titleCss); 
         $frame.children('.image-title').css(titleCss);
       }
     });
